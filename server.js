@@ -8,11 +8,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/sms', (req, res) => {
-  const reqMessage = req.body.Body;
+  const reqMessage = req.body.Body.trim();
   let resMessage = `I'm sorry, this is the wrong code :-(`;
 
-  if (reqMessage === '9999') {
-    resMessage = `6666`;
+  if (reqMessage === '666') {
+    resMessage = `zero-zilch-nada 9-7-2`;
   }
 
   const twiml = new MessagingResponse();
