@@ -12,7 +12,7 @@ app.post('/sms', (req, res) => {
   let resMessage = `I'm sorry, this is the wrong code :-(`;
 
   if (reqMessage === '666') {
-    resMessage = `zero-zilch-nada 9-7-2`;
+    resMessage = `Ah yes, the sign of the beast is what we were looking for. Maybe this next clue will help you survive.\n\nzero-zilch-nada 9-7-2`;
   }
 
   const twiml = new MessagingResponse();
