@@ -23,6 +23,10 @@ app.post('/sms', (req, res) => {
   res.end(twiml.toString());
 });
 
+app.get('/', (req, res) => {
+  res.end('foobar');
+});
+
 http.createServer(app).listen(1337, () => {
   console.log('Express server listening on port 1337');
 });
